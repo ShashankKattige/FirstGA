@@ -10,7 +10,6 @@ jobs:
           run: echo "Welcome for action"
         - name: list all files
           run : ls
-        - name: read files
-          run: cat README.md
+      
 
 
