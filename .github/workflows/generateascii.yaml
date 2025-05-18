@@ -21,7 +21,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dragon artifact
-        path: /dragon.txt
+        path: dragon.txt
   test_job:
     needs: [ascii_job]
     runs-on: ubuntu-latest
@@ -34,7 +34,7 @@ jobs:
       run: grep -i "dragon" dragon.txt
   
   deploy_job:
-    needs: ascii_job
+    needs: test_job
     runs-on: ubuntu-latest
     steps:
     - name: check dragon 
